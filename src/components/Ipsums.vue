@@ -47,7 +47,7 @@ export default {
       }
     },
     handleAdd(ipsum) {
-      this.ipsums.push(ipsum)
+      this.ipsums.push(ipsum);
     }
   }
 };

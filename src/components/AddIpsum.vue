@@ -11,34 +11,34 @@
 
 <script>
 export default {
-    props: {
-        onAdd: Function
-    },
-    data() {
-        return {
-            title: '',
-            category: '',
-            author: '',
-            authorUrl: '',
-            publishedOn: '',
-            body: ''
-        }
-    },
-    methods: {
-        handleSubmit() {
-            const newIpsum = {
-                title: this.title,
-                category: '',
-                author: '',
-                authorUrl: '',
-                publishedOn: '',
-                body: ''
-            };
-            this.onAdd(newIpsum);
+  props: {
+    onAdd: Function
+  },
+  data() {
+    return {
+      title: '',
+      category: '',
+      author: '',
+      authorUrl: '',
+      publishedOn: '',
+      body: ''
+    };
+  },
+  methods: {
+    handleSubmit() {
+      const newIpsum = {
+        title: this.title,
+        category: '',
+        author: '',
+        authorUrl: '',
+        publishedOn: '',
+        body: ''
+      };
+      this.onAdd(newIpsum);
             
-            this.title = '';
-        }
+      this.title = '';
     }
+  }
 
 
 };
