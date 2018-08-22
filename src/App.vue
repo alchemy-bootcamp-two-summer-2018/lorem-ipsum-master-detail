@@ -1,17 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <Ipsums:
+      :ipsums="ipsums"
+      :selected="selectedIpsum"
+      :onselect="handleSelect"
+      />
+  <IpsumViewer
+    :ipsum="selectedIpsum"
+    :onUpdate="handleUpdate"
+    />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ipsumsApi from './services/ipsumsApi';
 
 export default {
   name: 'app',
+  data() {
+    return 
+  
+  }
   components: {
-    HelloWorld
+    
   }
 }
 </script>
