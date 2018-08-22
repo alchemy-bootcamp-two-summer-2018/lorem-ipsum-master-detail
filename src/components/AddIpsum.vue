@@ -25,11 +25,21 @@
 <script>
 export default {
   props: {
-    onUpdate: Function
+    onAdd: Function
+  },
+  data() {
+    return {
+      title: '',
+      category: '',
+      author: '',
+      authorUrl: '',
+      publishedOn: '',
+      body: ''
+    };
   },
   methods: {
     handleSubmit() {
-      const ipsum = {
+      const newIpsum = {
         title: this.title,
         category: this.category,
         author: this.author,
@@ -37,7 +47,7 @@ export default {
         publishedOn: this.publishedOn,
         body: this.body
       };
-      this.onUpdate(ipsum);
+      this.onAdd(newIpsum);
     }
   }
 };
