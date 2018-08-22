@@ -1,10 +1,13 @@
 <template>
   <ul>
-    <IpsumItem v-for="ipsum in ipsums"
+    <IpsumItem 
+      v-for="ipsum in ipsums"
       :key="ipsum.title"
-      :name="ipsum.title"
       :category="ipsum.category"
-      :select="onSelect"/>
+      :ipsum="ipsum"
+      :onSelect="onSelect"
+      :selected="selected"
+    />
   </ul>
 </template>
 
@@ -14,16 +17,29 @@ import IpsumItem from './IpsumItem.vue';
 export default {
   props: {
     onSelect: Function,
-    ipsums: Object
+    ipsums: Array,
+    selected: Object
   },
   components: {
     IpsumItem
+  },
+  methods: {
+    handleClick() {
+      this.onSelect(this.animal);
+    }
   }
+
 
 };
 </script>
 
 <style scoped>
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 5px;
+}
 
 
 </style>
