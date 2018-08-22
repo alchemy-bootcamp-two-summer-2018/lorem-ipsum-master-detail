@@ -1,7 +1,6 @@
 <template>
     <div>
-        <p>Title: {{ ipsum.title }}</p>
-        <p>Category: {{ ipsum.category }}</p>
+        <p>{{ ipsum.title }}: {{ ipsum.category }}</p>
     </div>
 </template>
 
