@@ -1,6 +1,7 @@
 <template>
   <div>
-    <AddIpsum/>
+    <AddIpsum
+      :onUpdate="handleUpdate"/>
     <IpsumList
       :ipsums="ipsums"/>
   </div>
@@ -20,6 +21,17 @@ export default {
   components: {
     IpsumList,
     AddIpsum
+  },
+  methods: {
+    handleUpdate(updated) {
+      const index = this.ipsums.findIndex(ipsum => {
+        return ipsum.title === updated.title;
+      });
+
+      if(index !== -1) {
+        this.ipsums.splice(index, 1, updated);
+      }
+    }
   }
 };
 </script>
