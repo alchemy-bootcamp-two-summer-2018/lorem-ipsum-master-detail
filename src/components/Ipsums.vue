@@ -32,6 +32,15 @@ export default {
   methods: {
     handleSelect(ipsum){
       this.selectedIpsum = ipsum;
+    },
+    handleUpdate(updated) {
+      const index = this.ipsums.findIndex(ipsum => {
+        return ipsum.title === updated.title; //key?
+      });
+      if(index !== -1) {
+        this.ipsums.splice(index, 1, updated);
+        this.selectedIpsum = updated;
+      }
     }
   }
 };
