@@ -6,14 +6,15 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue';
+import Ipsums from './components/Ipsums.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Header, Ipsums
   }
-}
+};
 </script>
 
 <style>
