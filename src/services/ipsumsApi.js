@@ -1,4 +1,4 @@
-const ipsums = [
+export default [
     {
         title:       'Bob Ross Ipsum',
         category:    'art',

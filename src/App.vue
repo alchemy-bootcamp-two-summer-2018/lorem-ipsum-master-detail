@@ -1,26 +1,21 @@
 <template>
   <div id="app">
-    <Ipsums:
-      :ipsums="ipsums"
-      :selected="selectedIpsum"
-      :onselect="handleSelect"
-      />
-  <IpsumViewer
-    :ipsum="selectedIpsum"
-    :onUpdate="handleUpdate"
-    />
+    <Ipsums/>
+  </div>
 </template>
 
 <script>
-import ipsumsApi from './services/ipsumsApi';
+import Ipsums from './components/Ipsums';
 
 export default {
   name: 'app',
-  data() {
-    return 
+  // data() {
+  //   return 
+      
   
-  }
+  // },
   components: {
+    Ipsums
     
   }
 }
