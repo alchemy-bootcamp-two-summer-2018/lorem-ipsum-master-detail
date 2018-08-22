@@ -1,8 +1,10 @@
 <template>
   <ul>
-    <IpsumItem v-for="item in ipsums"
-      :key="item.key"
-      :item="item"
+    <IpsumItem v-for="ipsum in ipsums"
+      :key="ipsum.key"
+      :ipsum="ipsum"
+      :selected="selected"
+      :onSelect="onSelect"
     />
   </ul>
 </template>
@@ -12,6 +14,8 @@ import IpsumItem from './IpsumItem.vue';
 export default {
   props: {
     ipsums: Array,
+    selected: Object,
+    onSelect: Function
   },
   components: {
     IpsumItem
