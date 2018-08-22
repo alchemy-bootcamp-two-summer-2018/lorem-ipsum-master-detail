@@ -1,7 +1,7 @@
 <template>
   <ul>
     <IpsumItem v-for="item in ipsums"
-      :key="item.title"
+      :key="item.key"
       :item="item"
     />
   </ul>
