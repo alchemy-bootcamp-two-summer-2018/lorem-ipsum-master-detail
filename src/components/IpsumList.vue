@@ -10,21 +10,21 @@
 </template>
 
 <script>
-import IpsumItem from './IpsumItem.vue'
+import IpsumItem from './IpsumItem.vue';
 
 export default {
 
-    props: {
-        ipsums: Array,
-        selected: Object,
-        onSelect: Function
-    },
+  props: {
+    ipsums: Array,
+    selected: Object,
+    onSelect: Function
+  },
 
-    components: {
-        IpsumItem,
-    }
+  components: {
+    IpsumItem,
+  }
 
-}
+};
 </script>
 
 <style>

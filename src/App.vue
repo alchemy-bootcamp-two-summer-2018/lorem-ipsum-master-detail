@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import Ipsums from './components/Ipsums'
-import ipsumApi from './services/ipsumApi'
+import Ipsums from './components/Ipsums';
+import ipsumApi from './services/ipsumApi';
 
 export default {
   name: 'app',
@@ -20,8 +20,8 @@ export default {
   },
 
   data(){
-    return{
-      ispums: ipsumApi.getIpsums(),
+    return {
+      ipsums: ipsumApi.getIpsums(),
       selectedIpsum: null
     };
   },
@@ -33,7 +33,7 @@ export default {
 
     }
   }
-}
+};
 </script>
 
 <style>

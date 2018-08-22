@@ -1,5 +1,5 @@
 /<template>
-    <li :class="{ selcted: ispum === selected}">
+    <li :class="{ selcted: ipsum === selected}">
 
         <h3> {{ipsum.title}} This is Ipsum Title </h3>
         <p> {{ipsum.catagory}} This is Ipsum Title </p>
@@ -10,19 +10,19 @@
 <script>
 export default {
 
-    props: {
-        ipsum: Object,
-        selected: Object,
-        onSelect: Function
-    },
+  props: {
+    ipsum: Object,
+    selected: Object,
+    onSelect: Function
+  },
 
-    methods: {
-        handleClick(){
-            this.onSelect(this.ipsum);
-        }
+  methods: {
+    handleClick(){
+      this.onSelect(this.ipsum);
     }
+  }
 
-}
+};
 </script>
 
 <style>
