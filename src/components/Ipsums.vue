@@ -1,5 +1,9 @@
 <template>
-  
+  <main>
+    <AddIpsum/>
+    <IpsumList/>
+    <Ipsum/>
+  </main>
 </template>
 
 <script>
@@ -13,9 +17,21 @@ export default {
 
   components: {
     AddIpsum, IpsumList, Ipsum
-  }
+  },
 
+  methods: {
+    handleAdd () {
+      // TODO
+    },
+    handleUpdate () {
+    // TODO
+    },
+    handleSelect () {
+    // TODO
+    },
+  },
 };
+
 </script>
 
 <style>
