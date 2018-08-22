@@ -1,9 +1,9 @@
 /<template>
-    <li :class="{ selcted: ipsum === selected}">
-
-        <h3> {{ipsum.title}} This is Ipsum Title </h3>
-        <p> {{ipsum.catagory}} This is Ipsum Title </p>
-
+    <li :class="{ selected: ipsum === selected}"
+    @click="handleClick"
+    >
+        <h3> Title: {{ipsum.title}} </h3>
+        <p> Category: {{ipsum.category}} </p>
     </li>
 </template>
 
