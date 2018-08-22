@@ -19,6 +19,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
+ul { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  grid-gap: 5px; 
+}
 
 </style>
