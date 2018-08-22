@@ -1,23 +1,43 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div >
+    <Ipsums 
+    :ipsums="ipsums"
+    :selected="selectedIpsum"
+    :onSelect="handleSelect"
+    />
+   
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Ipsums from './components/Ipsums'
+import ipsumApi from './services/ipsumApi'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Ipsums,
+  },
+
+  data(){
+    return{
+      ispums: ipsumApi.getIpsums(),
+      selectedIpsum: null
+    };
+  },
+
+  methods:{
+
+    handleSelect(ipsum) {
+      this.selectedIpsum = ipsum;
+
+    }
   }
 }
 </script>
 
 <style>
-#app {
+* {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
