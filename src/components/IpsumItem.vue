@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     handleClick() {
-      this.onSelect(this.animal);
+      this.onSelect(this.ipsum);
     }
   }
   
