@@ -2,6 +2,8 @@
   <main>
     <AddIpsum 
       :onAdd="handleAdd"
+      :onCancel="handleCancel"
+      :ipsum="ipsum"
     />
     <IpsumList 
       :onSelect="handleSelect"
@@ -35,11 +37,15 @@ export default {
     };
   },
   methods: {
-    handleAdd () {
-      // TODO
+    handleAdd() {
+      const ipsum = {
+        title: this.ipsum.title,
+        category: this.ipsum.category
+      };
+      this.handleUpdate(ipsum);
     },
-    handleUpdate () {
-    // TODO
+    handleUpdate(ipsum) {
+      this.ipsumDB.push(ipsum);
     },
     handleSelect(ipsum) {
       this.selected = ipsum;
