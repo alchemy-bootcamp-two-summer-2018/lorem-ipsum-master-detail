@@ -1,5 +1,8 @@
 <template>
-  
+  <div>
+    <IpsumDetail/>
+    <IpsumForm/>
+  </div>
 </template>
 
 <script>

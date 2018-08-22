@@ -1,5 +1,5 @@
 <template>
-  
+  <IpsumItem/>
 </template>
 
 <script>
