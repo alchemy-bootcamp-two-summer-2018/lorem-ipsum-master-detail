@@ -1,21 +1,15 @@
 <template>
-  <form @submit.prevent="onAdd">
+  <form @submit.prevent="handleSubmit">
     <label>Title:
-      <input v-model="title"/>
+      <input v-model="title" placeholder="enter a title"/>
     </label>
     <label>Category: 
-      <input v-model="category"/>
+      <input v-model="category" placeholder="enter a category"/>
     </label>
     <button type="submit">
-      Update
+      Add
     </button>
-    <button type="cancel" @click="onCancel">
-      Cancel
-    </button>
-    
-  
   </form>
-  
 </template>
 
 <script>
@@ -23,15 +17,26 @@
 export default {
   props: {
     onAdd: Function,
-    onCancel: Function,
-    ipsum: Object
   },
-  created() {
-    const ipsum = this.ipsum;
-    this.title = ipsum.title;
-    this.category = ipsum.category;
-    console.log('testing created');
+  data() {
+    return {
+      title: '',
+      category: '',
+    };
+  },
+  methods: {
+    handleSubmit() {
+      const newIpsum = {
+        title: this.title,
+        category: this.category,
+
+      };
+      this.onAdd(newIpsum);      
+      this.title = '';
+      this.category = '';
+    }
   }
+
 
 };
 </script>
