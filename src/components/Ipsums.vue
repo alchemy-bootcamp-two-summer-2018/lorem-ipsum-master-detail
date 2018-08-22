@@ -2,8 +2,6 @@
   <main>
     <AddIpsum 
       :onAdd="handleAdd"
-      :onCancel="handleCancel"
-      :ipsum="ipsum"
     />
     <IpsumList 
       :onSelect="handleSelect"
@@ -20,7 +18,6 @@
 import AddIpsum from './AddIpsum.vue';
 import IpsumList from './IpsumList.vue';
 import Ipsum from './Ipsum.vue';
-
 import ipsumDB from '../services/ipsumDB.js';
 
 export default {
@@ -37,15 +34,11 @@ export default {
     };
   },
   methods: {
-    handleAdd() {
-      const ipsum = {
-        title: this.ipsum.title,
-        category: this.ipsum.category
-      };
-      this.handleUpdate(ipsum);
-    },
-    handleUpdate(ipsum) {
+    handleAdd(ipsum) {
       this.ipsumDB.push(ipsum);
+    },
+    handleUpdate() {
+      //TODO
     },
     handleSelect(ipsum) {
       this.selected = ipsum;
