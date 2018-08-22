@@ -28,21 +28,21 @@ export default {
     IpsumViewer
   },
   methods: {
-     handleSelect(ipsum) {
-       this.selectedIpsum = ipsum;
-       console.log(this.selectedIpsum)
-     },
-     handleUpdate(updated) {
-       const index = this.ipsums.findIndex(ipsum => {
-         return ipsum.key === updated.key;
-       });
+    handleSelect(ipsum) {
+      this.selectedIpsum = ipsum;
+      console.log(this.selectedIpsum);
+    },
+    handleUpdate(updated) {
+      const index = this.ipsums.findIndex(ipsum => {
+        return ipsum.key === updated.key;
+      });
 
-       if(index !== -1) {
-         this.ipsums.splice(index, 1, updated);
-         this.selectedIpsum = updated;
-       }
-     }
-   }
+      if(index !== -1) {
+        this.ipsums.splice(index, 1, updated);
+        this.selectedIpsum = updated;
+      }
+    }
+  }
 };
 </script>
 
