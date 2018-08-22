@@ -1,4 +1,4 @@
-export default [
+const data = [
   {
     title: 'Bob Ross Ipsum',
     category: 'art',
@@ -169,3 +169,9 @@ export default [
 
   },
 ];
+
+export default {
+  getData() {
+    return data;
+  }
+};
