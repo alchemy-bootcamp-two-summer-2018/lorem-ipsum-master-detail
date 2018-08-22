@@ -1,7 +1,10 @@
 <template>
-    <li>
-        <h3>hello world</h3>
-        <p>{{ ipsum.title }}</p>
+    <li 
+    :class="{ selected: ipsum === selected }"
+    @click="handleClick"
+    >
+        <h2>{{ ipsum.title }}</h2>
+        <!-- {{ ipsum.body }} -->
     </li>
 </template>
 
@@ -9,11 +12,26 @@
 export default {
   props: {
     ipsum: Object,
+    selected: Object,
+    onSelect: Function
 
   },
+  methods: {
+    handleClick() {
+      this.onSelect(this.ipsum);
+    }
+  }
 };
 </script>
 
 <style>
+  li {
+  list-style: none;
+  text-align: center;
+  border: 1px solid #aaa;
+}
 
+.selected {
+  background: lightsteelblue;
+}
 </style>
