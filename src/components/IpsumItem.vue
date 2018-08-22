@@ -20,6 +20,14 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
+  li {
+    list-style: none;
+    text-align: center;
+    border: 1px solid #aaa;
+  }
+  .selected {
+    background: lightsteelblue;
+  }
+  
 </style>
