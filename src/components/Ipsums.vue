@@ -41,8 +41,8 @@ export default {
     handleUpdate () {
     // TODO
     },
-    handleSelect () {
-    // TODO
+    handleSelect(ipsum) {
+      this.selected = ipsum;
     },
   },
 };
