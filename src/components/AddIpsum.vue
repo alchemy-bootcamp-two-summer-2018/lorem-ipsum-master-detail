@@ -5,6 +5,9 @@
 <script>
 
 export default {
+  props: {
+    onAdd: Function
+  }
 
 };
 </script>

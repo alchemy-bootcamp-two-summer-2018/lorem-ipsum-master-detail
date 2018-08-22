@@ -1,8 +1,16 @@
 <template>
   <main>
-    <AddIpsum/>
-    <IpsumList/>
-    <Ipsum/>
+    <AddIpsum 
+      :onAdd="handleAdd"
+    />
+    <IpsumList 
+      :onSelect="handleSelect"
+      :ipsums="ipsumDB"
+    />
+    <Ipsum 
+      :onUpdate="handleUpdate"
+      :ipsum="selected"
+    />
   </main>
 </template>
 
@@ -11,14 +19,21 @@ import AddIpsum from './AddIpsum.vue';
 import IpsumList from './IpsumList.vue';
 import Ipsum from './Ipsum.vue';
 
-import data from '../services/data.js';
+import ipsumDB from '../services/ipsumDB.js';
 
 export default {
-
+  props: {
+    
+  },
   components: {
     AddIpsum, IpsumList, Ipsum
   },
-
+  data() {
+    return {
+      ipsumDB,
+      selected: null,
+    };
+  },
   methods: {
     handleAdd () {
       // TODO
