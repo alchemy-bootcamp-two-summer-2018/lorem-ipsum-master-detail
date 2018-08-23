@@ -1,9 +1,9 @@
 <template>
-    <li 
-    :class="{ selected: ipsum === selected }"
+    <li :class="{ selected: ipsum === selected }"
     @click="handleClick"
     >
         <h2>{{ ipsum.title }}</h2>
+
         <!-- {{ ipsum.body }} -->
     </li>
 </template>

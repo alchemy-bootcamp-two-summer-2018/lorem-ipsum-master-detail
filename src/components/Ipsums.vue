@@ -4,12 +4,17 @@
           :selected="selectedIpsum"
           :onSelect="handleSelect"
         />
+        <Ipsum
+            :ipsum="selectedIpsum"
+        />
     </div>
 </template>
 
 <script>
 import ipsums from '../services/ipsumsApi.js';
 import IpsumList from './IpsumList.vue';
+import Ipsum from './Ipsum.vue';
+
 export default {
   data: function() {
     return {
@@ -18,7 +23,8 @@ export default {
     };
   },
   components: {
-    IpsumList
+    IpsumList,
+    Ipsum
   },
   methods: {
     handleSelect(ipsum) {
