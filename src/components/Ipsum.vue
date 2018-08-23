@@ -1,10 +1,20 @@
 <template>
-    <div id="ipsumViewer">
-      <article v-if="ipsumItem">
-        <IpsumForm/>
-        <IpsumDetail :ipsumItem="ipsumItem"/>
-      </article>
-      <p v-else>Please select an ipsum</p>
+    <div>
+      <section v-if="ipsumItem">
+          <p v-if="!editing">
+            <button @click="editing = true">Edit</button>
+          </p>
+
+        <IpsumForm v-if="editing"
+            :ipsumItem="ipsumItem"
+            :onUpdate="handleUpdate"
+            :onCancel="handleEdit"
+        />
+        <IpsumDetail v-else :ipsumItem="ipsumItem"/>
+      </section>
+      <section v-else>
+        <p>Please select an ipsum</p>
+      </section>
     </div>
 </template>
 
@@ -14,10 +24,33 @@ import IpsumForm from './IpsumForm.vue';
 
 export default {
   props: {
-    ipsumItem: Object
+    ipsumItem: Object,
+    onUpdate: Function
+  },
+  data() {
+    return {
+      editing: false
+    };
+  },
+  watch: {
+    ipsumItem(newIpsumItem, oldIpsumItem) {
+      if(newIpsumItem !== oldIpsumItem) {
+        this.editing = false;
+      }
+    }
   },
   components: {
-    IpsumDetail
+    IpsumDetail,
+    IpsumForm
+  },
+  methods: {
+    handleEdit() {
+      this.editing = false;
+    },
+    handleUpdate(ipsumItem) {
+      this.onUpdate(ipsumItem);
+      this.handleEdit();
+    }
   }
 };
 </script>
