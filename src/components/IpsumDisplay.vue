@@ -18,16 +18,7 @@ export default {
 
 </script>
 
-<<<<<<< HEAD
-<style>
-img {display: block; 
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;}
-=======
 <style scoped>
->>>>>>> 1936bf40ee3400e3847827dd27add0607e203fc6
 
 .meta {
   font-weight: bold;

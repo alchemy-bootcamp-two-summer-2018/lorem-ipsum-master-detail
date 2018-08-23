@@ -43,14 +43,10 @@
     </p>
     <p>
       <label>
-<<<<<<< HEAD
-        Body: <textarea rows="10" cols="100" v-model="body"></textarea>
-=======
         <p>
         Body: 
         </p>
         <textarea v-model="body"></textarea>
->>>>>>> 1936bf40ee3400e3847827dd27add0607e203fc6
       </label>
     </p>
     <p>
