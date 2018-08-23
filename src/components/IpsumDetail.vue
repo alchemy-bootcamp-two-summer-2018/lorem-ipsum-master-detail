@@ -1,11 +1,11 @@
 <template>
     <section>
         <h3>{{ ipsumItem.title }}</h3>
-        <p>{{ ipsumItem.category }}</p>
-        <p>{{ ipsumItem.author }}</p>
-        <p>{{ ipsumItem.authorUrl }}</p>
-        <p>{{ ipsumItem.publishedOn }}</p>
-        <p v-html="ipsumItem.body"></p>
+        <p class="info">Category: {{ ipsumItem.category }}</p>
+        <p class="info">Author: {{ ipsumItem.author }}</p>
+        <p class="info">Author URL: {{ ipsumItem.authorUrl }}</p>
+        <p class="info">Publication Date: {{ ipsumItem.publishedOn }}</p>
+        <p class="body" v-html="ipsumItem.body">Body HTML:</p>
     </section>
 </template>
 
@@ -18,6 +18,16 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
+.info {
+  margin: 10px;
+}
+
+.body {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
 
 </style>

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <AddIpsum
+      :onAdd="handleAdd"/>
     <IpsumList
       :ipsums="ipsums"
       :onSelect="handleSelect"
@@ -9,8 +11,6 @@
       :ipsumItem="selectedIpsum"
       :onUpdate="handleUpdate"
     />
-    <AddIpsum
-      :onAdd="handleAdd"/>
   </div>
 </template>
 

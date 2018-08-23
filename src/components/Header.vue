@@ -16,7 +16,7 @@ img {
     width: 100vw;
 }
 h1 {
-    padding: 20px;
+    padding: 30px 20px 20px;
 }
 
 </style>

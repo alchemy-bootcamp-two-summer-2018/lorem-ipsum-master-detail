@@ -1,25 +1,42 @@
 <template>
-    <form @submit.prevent="handleSubmit">
-        <label>
-            title: <input v-model="title">
-        </label>
-        <label>
-            category: <input v-model="category">
-        </label>
-        <label>
-            author: <input v-model="author">
-        </label>
-        <label>
-            authorUrl: <input v-model="authorUrl">
-        </label>
-        <label>
-            publishedOn: <input v-model="publishedOn">
-        </label>
-        <label>
-            body: <input v-model="body">
-        </label>
-        <button type="submit">Update</button>
-    </form>
+    <div>
+        <h2>Add Your Own Ipsum</h2>
+        <form @submit.prevent="handleSubmit">
+            <p>Title<br/>
+                <label>
+                    <input v-model="title">
+                </label>
+            </p>
+            <p>Category<br/>
+                <label>
+                    <input v-model="category">
+                </label>
+            </p>
+            <p>Author<br/>
+                <label>
+                    <input v-model="author">
+                </label>
+            </p>
+            <p>Author URL<br/>
+                <label>
+                    <input v-model="authorUrl">
+                </label>
+            </p>
+            <p>Publication Date<br/>
+                <label>
+                    <input v-model="publishedOn">
+                </label>
+            </p>
+            <p>Body HTML <br/>
+                <label>
+                    <textarea v-model="body"></textarea>
+                </label>
+            </p>
+            <p>
+                <button type="submit">Add</button>
+            </p>
+        </form>
+    </div>
 </template>
 
 <script>
@@ -53,6 +70,23 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
+input {
+    width: 70%;
+    padding: 10px;
+    margin: 5px 20px 20px 20px;
+    font-size: 1em;
+}
+
+textarea {
+    width: 70%;
+    height: 200px;
+    font-size: 1em;
+}
+
+h2 {
+    margin: 20px 20px 30px;
+}
 
 </style>
