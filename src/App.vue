@@ -1,16 +1,19 @@
 <template>
   <div id="app">
+    <Header/>
     <Ipsums/>
   </div>
 </template>
 
 <script>
 import Ipsums from './components/Ipsums.vue';
+import Header from './components/Header.vue';
 
 export default {
   name: 'app',
   components: {
-    Ipsums
+    Ipsums,
+    Header
   }
 };
 </script>
