@@ -11,6 +11,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+img {
+    width: 100vw;
+}
+h1 {
+    padding: 20px;
+}
 
 </style>

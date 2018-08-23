@@ -1,16 +1,16 @@
 <template>
   <div>
-    <AddIpsum
-      :onAdd="handleAdd"/>
-    <Ipsum
-      :ipsumItem="selectedIpsum"
-      :onUpdate="handleUpdate"
-    />
     <IpsumList
       :ipsums="ipsums"
       :onSelect="handleSelect"
       :selected="selectedIpsum"
     />
+    <Ipsum
+      :ipsumItem="selectedIpsum"
+      :onUpdate="handleUpdate"
+    />
+    <AddIpsum
+      :onAdd="handleAdd"/>
   </div>
 </template>
 
@@ -52,3 +52,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+
+
+
+</style>
