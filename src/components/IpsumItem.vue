@@ -3,8 +3,8 @@
     :class="{ selected: ipsum === selected }"
     @click="handleClick"
   >
-    <p>{{ ipsum.title }}</p>
-    <p>{{ ipsum.category }}</p>
+    <p class="tile-title">{{ ipsum.title }}</p>
+    <p class="tile-cat">{{ ipsum.category }}</p>
   </li>
 </template>
 
@@ -48,6 +48,14 @@ li:hover {
 
 .selected {
   background: #eb6624;
+}
+
+.tile-title {
+  font-weight: bold;
+  font-size: 130%;
+}
+.tile-cat {
+  text-transform:capitalize;
 }
 
 </style>

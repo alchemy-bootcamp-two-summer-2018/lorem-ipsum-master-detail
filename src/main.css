@@ -20,6 +20,7 @@ body {
   text-align: center;
   background-color: rgb(255, 253, 163);
 }
+
 ::-webkit-scrollbar {
   width: 12px;
 }
