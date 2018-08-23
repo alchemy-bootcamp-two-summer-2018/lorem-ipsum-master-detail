@@ -37,8 +37,6 @@ body {
 .ipsum-body {
   margin: 8%;
   vertical-align: middle;
-  display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
 
 }
 
@@ -49,12 +47,11 @@ body {
   height: auto;
   overflow: hidden;
   font-size: 18px;
-  display: table-cell; 
   justify-self: center;
 }
 .ipsum-body p img {
-  display: absolute;
-  margin: 5px auto;
+  display: block;
+  margin: auto;
   width: 175px;
   height: 175px;
 }
