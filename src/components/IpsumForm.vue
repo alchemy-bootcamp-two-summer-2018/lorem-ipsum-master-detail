@@ -16,7 +16,7 @@
             publishedOn: <input v-model="publishedOn">
         </label>
         <label>
-            body: <input v-model="body">
+            body: <textarea v-model="body"></textarea>
         </label>
         <button type="submit">Update</button>
         <button type="cancel" @click="onCancel">Cancel</button>
@@ -65,6 +65,15 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
+input {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+}
 
 </style>
