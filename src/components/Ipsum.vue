@@ -1,11 +1,20 @@
 <template>
   <div v-if="ipsum">
-    <IpsumForm v-if="editing"    
+
+    <p v-if="!editing">
+      <button @click="editing = true">Edit</button>
+    </p>
+
+    <IpsumForm 
+      v-if="editing"    
       :ipsum="ipsum"
       :onUpdate="handleUpdate"
       :onCancel="handleEndEdit"
     />
-    <IpsumDetail v-else    />
+    <IpsumDetail 
+      v-else
+      :ipsum="ipsum"
+    />
   </div>
 </template>
 
@@ -15,9 +24,8 @@ import IpsumForm from './IpsumForm.vue';
 
 export default {
   props: {
-    onUpdate: Function,
     ipsum: Object,
-    selected: Object
+    onUpdate: Function,
   },
   components: {
     IpsumDetail, IpsumForm
@@ -26,6 +34,22 @@ export default {
     return {
       editing: false
     };
+  },
+  watch: {
+    ipsum(newIpsum, oldIpsum) {
+      if(newIpsum !== oldIpsum) {
+        this.editing = false;
+      }
+    }
+  },
+  methods: {
+    handleEndEdit() {
+      this.editing = false;
+    },
+    handleUpdate(ipsum) {
+      this.onUpdate(ipsum);
+      this.handleEndEdit();
+    }
   }
 };
 </script>
