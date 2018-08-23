@@ -3,11 +3,14 @@
     <AddIpsum
       :onAdd="handleAdd"/>
     <Ipsum
-      :ipsumItem="selectedIpsum"/>
+      :ipsumItem="selectedIpsum"
+      :onUpdate="handleUpdate"
+    />
     <IpsumList
       :ipsums="ipsums"
       :onSelect="handleSelect"
-      :selected="selectedIpsum"/>
+      :selected="selectedIpsum"
+    />
   </div>
 </template>
 
@@ -30,22 +33,22 @@ export default {
     Ipsum
   },
   methods: {
-    
     handleAdd(ipsum) {
       this.ipsums.push(ipsum);
     },
-
     handleSelect(ipsumItem) {
       this.selectedIpsum = ipsumItem;
+    },
+    handleUpdate(updated) {
+      const index = this.ipsums.findIndex(ipsumItem => {
+        return ipsumItem.title === updated.ipsumTitle;
+      });
+
+      if(index !== -1) {
+        this.ipsums.splice(index, 1, updated);
+        this.selectedIpsum = updated;
+      }
     }
   }
-  // {handleUpdate(updated) {
-  // const index = this.ipsums.findIndex(ipsum => {
-  //   return ipsum.title === updated.title;
-  // });
-
-  // if(index !== -1) {
-  //   this.ipsums.splice(index, 1, updated);
-  // }
 };
 </script>
