@@ -58,6 +58,9 @@ export default {
 </script>
 
 <style scoped>
+
+
+
 form {
   width: 80%;
   margin: 0 auto;
@@ -75,8 +78,10 @@ textarea {
 }
 button {
   margin: 10px;
-  padding: 5px;
+  padding: 8px;
   border-radius: 12px;
+  background-color: rgb(247, 212, 138);
+  box-shadow: 1px 1px 3px grey;
 }
 button:hover {
   cursor: pointer;
@@ -87,9 +92,9 @@ label {
   margin: 10px;
 }
 input {
-  height: 29px;
+  height: 17px;
   border-radius: 12px;
-  padding: 2px;
+  padding: 8px 16px;
 }
 
 </style>

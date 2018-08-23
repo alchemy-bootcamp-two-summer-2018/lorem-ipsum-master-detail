@@ -2,7 +2,7 @@
   <header>
     <img alt="Ipsum logo" src="../assets/logo.png">
     <div class="title">
-      <h1>Ipsum Warehouse</h1>
+      <h1>Ipsum Energy</h1>
       <p>Need an ipsum? We got it.</p>
     </div>
   </header>
@@ -20,7 +20,8 @@ header {
   display: grid;
   grid-template-areas: "logo title title avatar";
   margin-bottom: 30px;
-
+  box-shadow: 2px 2px 5px black;
+  padding: 20px;
 }
 
 img {
@@ -34,7 +35,13 @@ img {
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 64px;
+  color: #eb6624;
+  text-shadow: 2px 2px #616161;
+}
+
+p {
+  color: black;
 }
 
 </style>
