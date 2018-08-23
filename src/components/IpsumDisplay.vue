@@ -3,7 +3,7 @@
     <h2>{{ ipsum.title }}</h2>
     <p class="meta">{{ ipsum.category }} | {{ ipsum.author }} | {{ ipsum.authorURL }}
     | {{ ipsum.publishedOn }}</p>
-    <p>{{ ipsum.body }}</p>
+    <p  v-html="ipsum.body"></p>
   </section>
 </template>
 
