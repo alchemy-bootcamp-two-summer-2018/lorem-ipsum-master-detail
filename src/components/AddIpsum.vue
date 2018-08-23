@@ -1,16 +1,10 @@
 <template>
   <form @submit.prevent="handleSubmit">
-    <p>
-      <label>
-        Add a new Ipsum title: <input v-model="title">
-      </label>
+   <p>
+      <label> <input placeholder="here" v-model="title"></label>
+      <button type="submit">Add Your New Ipsum</button>
     </p>
-    <p>
       
-    <p>
-      <button type="submit">Add</button>
-
-    </p>
   </form>
 </template>
 
@@ -54,6 +48,31 @@ export default {
 
 </script>
 
-<style>
+
+<style scoped>
+
+form {
+    border: solid 1px #dddddd;
+    padding: 40px;
+}
+
+input {
+  padding: 10px;
+  margin-right: 20px;
+  width: 300px;
+  font-size:14px;
+
+}
+
+button {
+    font-size: 16px;
+    background: #42b983;
+    width: 250px;
+    border-radius: 3px;
+    color: white;
+    padding: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
 </style>

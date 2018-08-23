@@ -33,8 +33,14 @@ export default {
 
 ul {
     display: grid;
-    grid-template-columns: repeat (auto-fit, min-max (200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin-left:80px
+
+   
 }
 
 </style>

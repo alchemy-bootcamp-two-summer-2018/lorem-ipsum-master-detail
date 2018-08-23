@@ -84,4 +84,14 @@ export default {
 
 <style>
 
+button {
+      font-size: 20px;
+    background: #42b983;
+    width: 300px;
+    border-radius: 3px;
+    color: white;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 </style>
