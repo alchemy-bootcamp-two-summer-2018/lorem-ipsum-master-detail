@@ -11,12 +11,10 @@ import Ipsums from './components/Ipsums';
 
 export default {
   name: 'app',
-
   components: {
     Header,
     Ipsums,
   },
-
 };
 </script>
 

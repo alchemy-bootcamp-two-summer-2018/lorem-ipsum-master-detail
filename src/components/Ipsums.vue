@@ -1,5 +1,8 @@
 /<template>
     <div class="ipsums">
+        <AddIpsum         
+        :onAdd="handleAdd"
+        />
         <IpsumList
         :ipsums="ipsums"
         :selected="selectedIpsum"
@@ -16,16 +19,26 @@
 import ipsumApi from '../services/ipsumApi';
 import IpsumList from './IpsumList';
 import Ipsum from './Ipsum';
+import AddIpsum from './AddIpsum';
 
 export default {
-    
+
   data() {
     return {
       ipsums: ipsumApi.getIpsums(),
       selectedIpsum: null,
+      ipsum: {
+        title: '',
+        category: '',
+        author: '',
+        authorUrl: '',
+        publishedOn: '',
+        body: ''
+      },
     };
   },
   components: {
+    AddIpsum,
     IpsumList,
     Ipsum
   },
@@ -41,6 +54,9 @@ export default {
         this.ipsums.splice(index, 1, updated);
         this.selectedIpsum = updated;
       }
+    },
+    handleAdd(ipsum) {
+      this.ipsums.push(ipsum);
     }
   }
 };

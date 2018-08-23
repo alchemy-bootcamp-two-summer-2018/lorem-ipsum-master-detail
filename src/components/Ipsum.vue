@@ -4,7 +4,6 @@
       <p v-if="!editing">
         <button @click="editing = true">Edit</button>
       </p>
-
       <IpsumForm v-if="editing" 
         :ipsum="ipsum"
         :onUpdate="handleUpdate"
@@ -20,6 +19,7 @@
 </template>
 
 <script>
+
 import IpsumForm from './IpsumForm.vue';
 import IpsumDisplay from './IpsumDisplay.vue';
 
