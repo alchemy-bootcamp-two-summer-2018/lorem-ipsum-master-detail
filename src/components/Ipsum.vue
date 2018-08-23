@@ -1,20 +1,22 @@
 <template>
-  <div>
+  <div class="flex-container">
     <section v-if="ipsum">
-      <p v-if="!editing">
-        <button @click="editing = true">Edit</button>
-      </p>
       <IpsumForm v-if="editing" 
         :ipsum="ipsum"
         :onUpdate="handleUpdate"
         :onCancel="handleEndEdit"
       />
       <IpsumDisplay v-else :ipsum="ipsum"/>  
+      
+      <p v-if="!editing">
+        <button @click="editing = true">Edit</button>
+      </p>
     </section>
 
     <section v-else>
-      <p>Please choose an ipsum</p>
+      <p></p>
     </section>
+    
   </div>
 </template>
 
@@ -60,5 +62,9 @@ export default {
 </script>
 
 <style>
+.flex-container{
+  display: flex;
+  justify-content: center;
+}
 
 </style>

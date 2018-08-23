@@ -1,10 +1,12 @@
 /<template>
-    <li :class="{ selected: ipsum === selected}"
+  <li 
+    :class="{ selected: ipsum === selected }"
     @click="handleClick"
     >
-        <h3> Title: {{ipsum.title}} </h3>
+        <h2> {{ipsum.title}} </h2>
         <p> Category: {{ipsum.category}} </p>
-    </li>
+  </li>
+ 
 </template>
 
 <script>
@@ -22,21 +24,48 @@ export default {
     handleClick(){
       this.onSelect(this.ipsum);
     }
+    
   }
 
 };
+
 </script>
 
-<style>
+<style scoped>
 
-.selected {
-    background: pink;
+.selected { 
+    background: #35495e;
+}
+.selected:hover { 
+    background: #35495ecf;
 }
 
+.selected h2 {
+  color: #f8f8f8;
+  margin: 0;
+}
+
+.selected p {
+  color: #f8f8f8;
+}
+h2 {
+   margin: 0;
+}
+p {
+  font-family: monospace;
+  color:#2973b7;
+   margin: 0;
+}
+li:hover{
+  background:#f4f2f2
+}
 li {
-    background: grey;
+  padding: 20px;
+    background: #f8f8f8;
     list-style:none;
-    border: solid 1px black;
+
+    border-radius: 5px;
+
 }
 
 </style>
