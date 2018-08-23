@@ -14,6 +14,10 @@
   </form>
 </template>
 
+//this form allows a user to add a new ipsum title...
+//then they can add in the other info separately in the other form
+
+
 <script>
 export default {
   props: {
@@ -39,6 +43,8 @@ export default {
         publishedOn: this.publishedOn,
         body: this.body
       };
+      
+      // add new user ipsum to list of ipsums
       this.onAdd(newIpsum);
 
       this.title = '';

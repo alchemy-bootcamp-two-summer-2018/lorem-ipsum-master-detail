@@ -38,6 +38,8 @@
 </template>
 
 <script>
+//allows user to edit ipsum info
+
 export default {
   props: {
     ipsum: Object,

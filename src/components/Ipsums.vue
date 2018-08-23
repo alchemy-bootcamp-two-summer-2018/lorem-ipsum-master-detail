@@ -16,6 +16,8 @@
 </template>
 
 <script>
+// contains functionality for adding or editing ipsums
+
 import ipsumApi from '../services/ipsumApi';
 import IpsumList from './IpsumList';
 import Ipsum from './Ipsum';

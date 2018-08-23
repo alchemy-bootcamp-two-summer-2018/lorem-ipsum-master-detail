@@ -10,6 +10,8 @@
 <script>
 export default {
 
+// displays category and title for a single ipsum 
+
   props: {
     ipsum: Object,
     selected: Object,

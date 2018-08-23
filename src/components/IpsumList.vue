@@ -10,6 +10,8 @@
 </template>
 
 <script>
+//displays title & category of all ipsums in display
+
 import IpsumItem from './IpsumItem.vue';
 
 export default {

@@ -19,6 +19,8 @@
 </template>
 
 <script>
+//allows user to view detailed info
+// and also edit that info
 
 import IpsumForm from './IpsumForm.vue';
 import IpsumDisplay from './IpsumDisplay.vue';

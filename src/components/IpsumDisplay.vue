@@ -10,6 +10,7 @@
 </template>
 
 <script>
+//detailed view of each ipsum
 
 export default {
   props: {
