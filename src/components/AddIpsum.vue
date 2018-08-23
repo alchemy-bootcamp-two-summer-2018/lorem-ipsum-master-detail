@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="handleSubmit">
    <p>
-      <label> <input placeholder="here" v-model="title"></label>
+      <label> <input placeholder="fill in your new ipsum title here" v-model="title"></label>
       <button type="submit">Add Your New Ipsum</button>
     </p>
       

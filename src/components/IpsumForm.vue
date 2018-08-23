@@ -85,7 +85,7 @@ export default {
 <style>
 
 button {
-      font-size: 20px;
+    font-size: 20px;
     background: #42b983;
     width: 300px;
     border-radius: 3px;

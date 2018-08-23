@@ -16,7 +16,6 @@ export default {
 header {
     top: 0;
     left: 0;
-    width: 100vw;
     background:#223657;
     padding: 20px;
 

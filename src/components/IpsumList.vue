@@ -1,4 +1,5 @@
 <template>
+
 <ul>
     <IpsumItem v-for="ipsum in ipsums"
     :key="ipsum.title"
@@ -7,6 +8,7 @@
     :onSelect="onSelect"/>
 
 </ul>
+
 </template>
 
 <script>
@@ -29,18 +31,18 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
+
 
 ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-    align-items: center;
     justify-content: center;
-    max-width: 1200px;
-    margin-left:80px
-
-   
+    align-content: center;
+    margin: 0;
+    grid-gap: 20px;
+    padding: 30px 60px 30px 60px;
 }
 
 </style>

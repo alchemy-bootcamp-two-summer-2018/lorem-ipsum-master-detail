@@ -65,7 +65,10 @@ export default {
 
 </script>
 
-
 <style>
+.ipsums {
+  display:flex;
+  flex-direction: column;
+}
 
 </style>

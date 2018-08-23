@@ -27,11 +27,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
-.selected {
-    
+.selected { 
     background: #35495e;
+}
+.selected:hover { 
+    background: #35495ecf;
 }
 
 .selected h2 {
