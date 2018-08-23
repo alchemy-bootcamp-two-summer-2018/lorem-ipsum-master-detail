@@ -4,8 +4,8 @@
       <label> <input placeholder="fill in your new ipsum title here" v-model="title"></label>
       <button type="submit">Add Your New Ipsum</button>
     </p>
-      
   </form>
+  
 </template>
 
 //this form allows a user to add a new ipsum title...

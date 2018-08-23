@@ -1,33 +1,52 @@
 <template>
-  <form @submit.prevent="handleSubmit">
+  <form class="display-edit-ipsum" @submit.prevent="handleSubmit">
+    <h2> Edit Ipsum Below </h2>
     <p>
       <label>
-        Title: <input v-model="title">
+          <p>
+          Title: 
+          </p>
+          <input v-model="title">
       </label>
     </p>
     <p>
       <label>
-        Category: <input v-model="category">
+        <p> 
+        Category:
+        </p> 
+        <input v-model="category">
       </label>
     </p>
     <p>
       <label>
-        Author: <input v-model.number="author">
+        <p>
+        Author: 
+        </p>
+        <input v-model.number="author">
       </label>
     </p>
     <p>
       <label>
-        AuthorURL: <input v-model.number="authorUrl">
+        <p>
+        AuthorURL: 
+        </p>
+        <input v-model.number="authorUrl">
       </label>
     </p>
     <p>
       <label>
-        Published On: <input v-model.number="publishedOn">
+        <p>
+        Published On: 
+        </p>
+        <input v-model.number="publishedOn">
       </label>
     </p>
     <p>
       <label>
-        Body: <textarea v-model="body"></textarea>
+        <p>
+        Body: 
+        </p>
+        <textarea v-model="body"></textarea>
       </label>
     </p>
     <p>
@@ -82,16 +101,34 @@ export default {
 
 </script>
 
-<style>
-
-button {
-    font-size: 20px;
-    background: #42b983;
-    width: 300px;
-    border-radius: 3px;
-    color: white;
-    padding: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+<style scoped>
+p {
+  text-align: left;
+  margin: 0;
 }
+
+form {
+ 
+  padding: 40px;
+}
+
+input {
+  padding: 20px;
+  min-width: 570px;
+  margin-bottom: 15px;
+  text-align: left;
+  border: solid 1px #dddddd;
+
+}
+
+textarea {
+  padding: 20px;
+  min-width: 570px;
+  min-height: 250px;
+  margin-bottom: 15px;
+  text-align: left;
+  border: solid 1px #dddddd;
+
+}
+
 </style>

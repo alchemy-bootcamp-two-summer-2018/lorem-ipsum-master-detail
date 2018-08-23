@@ -1,5 +1,5 @@
 <template>
-  <section class="display">
+  <section class="display-edit-ipsum">
     <h2>{{ ipsum.title }}</h2>
     <p class="meta">{{ ipsum.category }} | {{ ipsum.author }} | {{ ipsum.authorURL }}
     | {{ ipsum.publishedOn }}</p>
@@ -19,11 +19,7 @@ export default {
 </script>
 
 <style scoped>
-.display{
-  max-width: 700px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-  padding: 30px
-}
+
 .meta {
   font-weight: bold;
   font-family: monospace;

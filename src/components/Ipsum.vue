@@ -14,7 +14,7 @@
     </section>
 
     <section v-else>
-      <p>Please choose an ipsum</p>
+      <p></p>
     </section>
     
   </div>

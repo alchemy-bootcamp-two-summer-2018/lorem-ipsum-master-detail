@@ -1,10 +1,12 @@
 /<template>
-    <li :class="{ selected: ipsum === selected}"
+  <li 
+    :class="{ selected: ipsum === selected }"
     @click="handleClick"
     >
         <h2> {{ipsum.title}} </h2>
         <p> Category: {{ipsum.category}} </p>
-    </li>
+  </li>
+ 
 </template>
 
 <script>
@@ -22,9 +24,11 @@ export default {
     handleClick(){
       this.onSelect(this.ipsum);
     }
+    
   }
 
 };
+
 </script>
 
 <style scoped>
