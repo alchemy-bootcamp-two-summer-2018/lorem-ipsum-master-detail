@@ -41,7 +41,7 @@ export default {
     },
     handleUpdate(updated) {
       const index = this.ipsums.findIndex(ipsumItem => {
-        return ipsumItem.title === updated.ipsumTitle;
+        return ipsumItem.key === updated.key;
       });
 
       if(index !== -1) {
