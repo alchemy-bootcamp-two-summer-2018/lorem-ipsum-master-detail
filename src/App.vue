@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Ipsums />
+    <header>
+      <Header/>
+    </header>
+    <main>
+      <Ipsums/>
+    </main>
   </div>
 </template>
 
 <script>
 import Ipsums from './components/Ipsums.vue';
+import Header from './components/Header.vue';
 
 export default {
   name: 'app',
   components: {
-    Ipsums
+    Ipsums,
+    Header
   }
 };
 </script>
