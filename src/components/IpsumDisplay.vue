@@ -3,7 +3,7 @@
     <h2>{{ ipsum.title }}</h2>
     <p class="meta">{{ ipsum.category }} | {{ ipsum.author }} | {{ ipsum.publishedOn }} | 
       {{ ipsum.authorURL }}</p>
-    <p  class="body" v-html="ipsum.body"></p>
+    <p class="body" v-html="ipsum.body"></p>
   </section>
 </template>
 
@@ -18,17 +18,15 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 
-h2 {
-  
-}
+
 
 .meta {
   font-weight: bold;
   font-family: monospace;
   color:#2973b7;
-  text-align: center;
+  text-align: center !important;
 }
 
 
