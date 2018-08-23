@@ -26,8 +26,6 @@ export default {
 
 .body {
   text-align: left;
-  margin-bottom: 30px;
 }
-
 
 </style>
