@@ -1,8 +1,8 @@
 <template>
   <section class="display-edit-ipsum">
     <h2>{{ ipsum.title }}</h2>
-    <p class="meta">{{ ipsum.category }} | {{ ipsum.author }} | {{ ipsum.authorURL }}
-    | {{ ipsum.publishedOn }}</p>
+    <p class="meta">{{ ipsum.category }} | {{ ipsum.author }} | {{ ipsum.publishedOn }} | 
+      {{ ipsum.authorURL }}</p>
     <p  class="body" v-html="ipsum.body"></p>
   </section>
 </template>
@@ -20,15 +20,19 @@ export default {
 
 <style scoped>
 
+h2 {
+  
+}
+
 .meta {
   font-weight: bold;
   font-family: monospace;
   color:#2973b7;
   text-align: center;
 }
-p {
-  text-align: left;
-}
+
+
+
 
 
 </style>

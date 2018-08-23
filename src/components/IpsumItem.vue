@@ -43,6 +43,7 @@ export default {
 .selected h2 {
   color: #f8f8f8;
   margin: 0;
+  text-align: center;
 }
 
 .selected p {
