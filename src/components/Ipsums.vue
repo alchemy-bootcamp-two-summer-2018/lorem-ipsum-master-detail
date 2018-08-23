@@ -6,6 +6,7 @@
         />
         <Ipsum
             :ipsum="selectedIpsum"
+            :onUpdate="handleUpdate"
         />
     </div>
 </template>
@@ -29,6 +30,16 @@ export default {
   methods: {
     handleSelect(ipsum) {
       this.selectedIpsum = ipsum;
+    },
+    handleUpdate(updated) {
+      const index = this.ipsums.findIndex(ipsum => {
+        return ipsum.key === updated.key;
+      });
+
+      if(index !== -1) {
+        this.animals.splice(index, 1, updated);
+        this.selectedIpsum = updated;
+      }
     }
   }
 };

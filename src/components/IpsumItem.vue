@@ -2,7 +2,7 @@
     <li :class="{ selected: ipsum === selected }"
     @click="handleClick"
     >
-        <h2>{{ ipsum.title }}</h2>
+        <h4>{{ ipsum.title }}</h4>
 
         <!-- {{ ipsum.body }} -->
     </li>
