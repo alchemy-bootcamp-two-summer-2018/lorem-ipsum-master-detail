@@ -6,6 +6,9 @@
     <label>Category: 
       <input v-model="category" placeholder="enter a category"/>
     </label>
+    <label>Body: 
+      <textarea v-model="body" placeholder="modify dis body"></textarea>
+    </label>
     <button type="submit">
       Update
     </button>
@@ -19,9 +22,33 @@
 <script>
 export default {
   props: {
-    onCancel: Function,
+    ipsum: Object,
     onUpdate: Function,
-    ipsum: Object
+    onCancel: Function,
+  },
+  data() {
+    return {
+      title: '',
+      category: '',
+      body: '',
+    };
+  },
+  created() {
+    const ipsum = this.ipsum;
+    this.title = ipsum.title;
+    this.category = ipsum.category;
+    this.body = ipsum.body;
+  },
+  methods: {
+    handleSubmit() {
+      const ipsum = {
+        key: this.ipsum.key,
+        title: this.title,
+        category: this.category,
+        body: this.body,
+      };
+      this.onUpdate(ipsum);
+    }
   }
 
 
@@ -32,5 +59,10 @@ export default {
 
 <style scoped>
 
+textarea {
+  display: block;
+  width: 500px;
+  height: 800px;
+}
 
 </style>
