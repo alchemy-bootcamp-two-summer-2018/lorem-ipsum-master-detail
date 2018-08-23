@@ -1,6 +1,10 @@
 <template>
-    <div>
+    <div id="ipsumViewer">
+      <article v-if="ipsumItem">
+        <IpsumForm/>
         <IpsumDetail :ipsumItem="ipsumItem"/>
+      </article>
+      <p v-else>Please select an ipsum</p>
     </div>
 </template>
 
