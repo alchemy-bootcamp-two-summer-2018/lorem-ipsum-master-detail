@@ -34,14 +34,16 @@ export default {
     this.title = ipsum.title;
     //   author: this.author,
     this.body = ipsum.body;
+    
   },
   methods: {
     handleSubmit() {
       const ipsum = {
         key: this.title,
         title: this.title,
-        author: this.author,
+        // author: this.author,
         body: this.body,
+        
       };
       this.onUpdate(ipsum);
     }

@@ -29,7 +29,6 @@ import IpsumDisplay from './IpsumDisplay.vue';
 export default {
   props: {
     ipsum: Object,
-    ipsums: Array,
     onUpdate: Function
   },
   data() {
@@ -54,6 +53,7 @@ export default {
     },
     handleUpdate(ipsum) {
       this.onUpdate(ipsum);
+      this.handleEndEdit();
     }
   }
 

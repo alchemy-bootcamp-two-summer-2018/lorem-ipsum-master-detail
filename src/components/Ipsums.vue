@@ -33,11 +33,11 @@ export default {
     },
     handleUpdate(updated) {
       const index = this.ipsums.findIndex(ipsum => {
-        return ipsum.key === updated.key;
+        return ipsum.title === updated.title;
       });
 
       if(index !== -1) {
-        this.animals.splice(index, 1, updated);
+        this.ipsums.splice(index, 1, updated);
         this.selectedIpsum = updated;
       }
     }
