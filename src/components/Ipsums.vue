@@ -38,8 +38,15 @@ export default {
     handleAdd(ipsum) {
       this.ipsumDB.push(ipsum);
     },
-    handleUpdate() {
-      //TODO
+    handleUpdate(updated) {
+      const index = this.ipsumDB.findIndex(ipsum => {
+        return ipsum.key === updated.key;
+      });
+
+      if(index !== -1) {
+        this.ipsumDB.splice(index, 1, updated);
+        this.selected = updated;
+      }
     },
     handleSelect(ipsum) {
       this.selected = ipsum;
