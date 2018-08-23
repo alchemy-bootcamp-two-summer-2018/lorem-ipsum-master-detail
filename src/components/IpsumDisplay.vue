@@ -3,7 +3,7 @@
     <h2>{{ ipsum.title }}</h2>
     <p class="meta">{{ ipsum.category }} | {{ ipsum.author }} | {{ ipsum.authorURL }}
     | {{ ipsum.publishedOn }}</p>
-    <p  v-html="ipsum.body"></p>
+    <p  class="body" v-html="ipsum.body"></p>
   </section>
 </template>
 
@@ -29,4 +29,6 @@ export default {
 p {
   text-align: left;
 }
+
+
 </style>
