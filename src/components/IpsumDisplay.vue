@@ -5,7 +5,7 @@
     <p>{{ ipsum.author }}</p>
     <p>{{ ipsum.authorURL }}</p>
     <p>{{ ipsum.publishedOn }}</p>
-    <p>{{ ipsum.body }}</p>
+    <p v-html="ipsum.body"></p>
   </section>
 </template>
 
@@ -21,5 +21,10 @@ export default {
 </script>
 
 <style>
+img {display: block; 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;}
 
 </style>

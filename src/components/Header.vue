@@ -1,6 +1,6 @@
 <template>
     <header>
-        <img src="images/ipsumlogo.png" alt="logo" height="100">
+        <img class="logo" src="images/ipsumlogo.png" alt="logo" height="100">
         <h1> Ipsum Creator </h1>
     </header>
 </template>
@@ -28,9 +28,9 @@ header {
     width: 100vw;
 
 }
-img {
-    margin-left: 0px;
-    text-align: left;
+.logo {
+    display: center; 
+    width: 20%;
 
 }
 h1 {

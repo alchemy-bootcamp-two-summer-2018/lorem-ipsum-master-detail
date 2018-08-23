@@ -27,7 +27,7 @@
     </p>
     <p>
       <label>
-        Body: <textarea v-model="body"></textarea>
+        Body: <textarea rows="10" cols="100" v-model="body"></textarea>
       </label>
     </p>
     <p>
