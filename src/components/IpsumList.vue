@@ -24,12 +24,11 @@ export default {
     IpsumItem
   },
   methods: {
-    handleClick() {
-      this.onSelect(this.ipsum);
-    }
+    // handleClick() {
+    //   this.onSelect(this.ipsum);
+      
+    // }
   }
-
-
 };
 </script>
 

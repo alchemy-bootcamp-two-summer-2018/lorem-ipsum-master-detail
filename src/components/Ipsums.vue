@@ -6,6 +6,7 @@
     <IpsumList 
       :onSelect="handleSelect"
       :ipsums="ipsumDB"
+      :selected="selected"
     />
     <Ipsum 
       :onUpdate="handleUpdate"
