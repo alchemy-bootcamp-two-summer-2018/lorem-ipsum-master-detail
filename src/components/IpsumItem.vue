@@ -30,12 +30,14 @@ export default {
 <style scoped>
 
 li {
+  padding: 5px 0px;
   list-style: none;
   text-align: center;
   border: 1px solid #aaa;
+  border-radius: 12px;
 }
 .selected {
-  background: red;
+  background: #eb6624;
 }
 
 </style>

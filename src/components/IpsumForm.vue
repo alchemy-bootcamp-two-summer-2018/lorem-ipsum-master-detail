@@ -58,11 +58,38 @@ export default {
 </script>
 
 <style scoped>
-
+form {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 textarea {
   display: block;
-  width: 500px;
-  height: 800px;
+  margin: 0px;
+  padding: 20px;
+  width: 800px;  
+  height: 500px;
+  border-radius: 12px;
+}
+button {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 12px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #eb6624;
+}
+label {
+  font-weight: bold;
+  margin: 10px;
+}
+input {
+  height: 29px;
+  border-radius: 12px;
+  padding: 2px;
 }
 
 </style>

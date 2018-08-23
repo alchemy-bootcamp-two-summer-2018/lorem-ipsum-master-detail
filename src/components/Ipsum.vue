@@ -55,6 +55,14 @@ export default {
 </script>
 
 <style scoped>
-
+button {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 12px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #eb6624;
+}
 
 </style>

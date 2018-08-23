@@ -42,6 +42,24 @@ export default {
 </script>
 
 <style scoped>
+button {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 12px;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #eb6624;
+}
+label {
+  font-weight: bold;
+  margin: 10px;
+}
+input {
+  height: 29px;
+  border-radius: 12px;
+  padding: 2px;
+}
 
 
 </style>
