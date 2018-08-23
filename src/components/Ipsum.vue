@@ -32,7 +32,7 @@ export default {
     ipsums: Array,
     onUpdate: Function
   },
-  date() {
+  data() {
     return {
       editing: false
     }

@@ -5,16 +5,12 @@
                 Title: <input v-model="title">
             </label>
         </p>
-                <p>
-            <label>
-                Author: <input v-model="author">
-            </label>
-        </p>
-                <p>
+        <p>
             <label>
                 Body: <input v-model="body">
             </label>
         </p>
+        <!-- <input v-html="ipsum.body"> -->
         <button type="submit">Update</button>
         <button type="cancel" @click="onCancel">Cancel</button>
     </form>
@@ -22,38 +18,35 @@
 
 <script>
 export default {
-    props: {
-        ipsum: Object,
-        onUpdate: Function, 
-        onCancel: Function
-    },
-    data() {
-        return {
-            title: '',
-            author: '',
-            body: ''
-        };
-    },
-    create() {
-        const ipsum = {
-            key: this.ipsum.key,
-            title: this.title,
-            author: this.author,
-            body: this.body
-        }
-    },
-    methods: {
-        handleSubmit() {
-            const ipsum = {
-                key: this.title,
-                title: this.title,
-                author: this.author,
-                body: this.body
-            };
-            this.onUpdate(ipsum);
-        }
+  props: {
+    ipsum: Object,
+    onUpdate: Function, 
+    onCancel: Function
+  },
+  data() {
+    return {
+      title: '',
+      body: '',
+    };
+  },
+  created() {
+    const ipsum = this.ipsum;
+    this.title = ipsum.title;
+    //   author: this.author,
+    this.body = ipsum.body;
+  },
+  methods: {
+    handleSubmit() {
+      const ipsum = {
+        key: this.title,
+        title: this.title,
+        author: this.author,
+        body: this.body,
+      };
+      this.onUpdate(ipsum);
     }
-}
+  }
+};
 </script>
 
 <style>

@@ -1,6 +1,6 @@
 <template>
     <section>
-        <span v-if="ipsum"
+        <span v-if="!editing"
          v-html="ipsum.body"></span>
 
     </section>
@@ -9,7 +9,8 @@
 <script>
 export default {
   props: {
-    ipsum: Object
+    ipsum: Object,
+    editing: Boolean
   }
 
 };
