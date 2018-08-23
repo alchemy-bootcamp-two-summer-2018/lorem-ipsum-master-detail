@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       editing: false
-    }
+    };
   },
   watch: {
     ipsum(newIpsum, oldIpsum) {
