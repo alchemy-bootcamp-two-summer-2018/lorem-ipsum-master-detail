@@ -1,10 +1,12 @@
 <template>
   <div id="app">
+    <Header/>
     <Ipsums/>
   </div>
 </template>
 
 <script>
+import Header from './components/Header';
 import Ipsums from './components/Ipsums';
 
 export default {
@@ -15,7 +17,8 @@ export default {
   
   // },
   components: {
-    Ipsums
+    Ipsums,
+    Header
     
   }
 };

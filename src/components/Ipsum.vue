@@ -17,7 +17,7 @@
       <section>
           <p>Please Choose an Ipsum</p>
       </section>
-
+      
 
     </div>
 </template>
@@ -25,6 +25,7 @@
 <script>
 import IpsumForm from './IpsumForm.vue';
 import IpsumDisplay from './IpsumDisplay.vue';
+
 
 export default {
   props: {
@@ -45,7 +46,7 @@ export default {
   },
   components: {
     IpsumForm,
-    IpsumDisplay
+    IpsumDisplay,
   },
   methods: {
     handleEndEdit() {
@@ -54,7 +55,8 @@ export default {
     handleUpdate(ipsum) {
       this.onUpdate(ipsum);
       this.handleEndEdit();
-    }
+    },
+  
   }
 
 };

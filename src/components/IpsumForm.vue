@@ -32,16 +32,14 @@ export default {
   created() {
     const ipsum = this.ipsum;
     this.title = ipsum.title;
-    //   author: this.author,
     this.body = ipsum.body;
     
   },
   methods: {
     handleSubmit() {
       const ipsum = {
-        key: this.title,
+        // key: this.title,
         title: this.title,
-        // author: this.author,
         body: this.body,
         
       };
