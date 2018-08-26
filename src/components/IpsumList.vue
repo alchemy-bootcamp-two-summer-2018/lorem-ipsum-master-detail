@@ -29,6 +29,6 @@ export default {
 ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 5px;
+  grid-gap: 10px;
 }
 </style>

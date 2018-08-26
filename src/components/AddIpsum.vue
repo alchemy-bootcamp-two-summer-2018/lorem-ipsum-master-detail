@@ -12,7 +12,6 @@
             </label>
         </p>
         <button type="submit">Add</button>
-        
     </form>
 </template>
 
@@ -42,6 +41,8 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
+h2 p {
+        font-family: sans-serif;
+}
 </style>

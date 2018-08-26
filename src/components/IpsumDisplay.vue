@@ -1,7 +1,9 @@
 <template>
     <section>
         <span v-if="!editing"
-         v-html="ipsum.body"></span>
+          v-html="ipsum.body"
+        >
+        </span>
 
     </section>
 </template>

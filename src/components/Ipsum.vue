@@ -55,8 +55,7 @@ export default {
     handleUpdate(ipsum) {
       this.onUpdate(ipsum);
       this.handleEndEdit();
-    },
-  
+    },  
   }
 
 };

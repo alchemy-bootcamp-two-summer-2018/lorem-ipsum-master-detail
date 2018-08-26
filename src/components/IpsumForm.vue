@@ -38,7 +38,7 @@ export default {
   methods: {
     handleSubmit() {
       const ipsum = {
-        // key: this.title,
+        key: this.title,
         title: this.title,
         body: this.body,
         
