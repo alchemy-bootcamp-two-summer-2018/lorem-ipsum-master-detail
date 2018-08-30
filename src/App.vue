@@ -11,11 +11,6 @@ import Ipsums from './components/Ipsums';
 
 export default {
   name: 'app',
-  // data() {
-  //   return 
-      
-  
-  // },
   components: {
     Ipsums,
     Header

@@ -10,13 +10,13 @@
                 Body: <input v-model="body">
             </label>
         </p>
-        <!-- <input v-html="ipsum.body"> -->
         <button type="submit">Update</button>
         <button type="cancel" @click="onCancel">Cancel</button>
     </form>
 </template>
 
 <script>
+
 export default {
   props: {
     ipsum: Object,
@@ -25,6 +25,7 @@ export default {
   },
   data() {
     return {
+      key: '',
       title: '',
       body: '',
     };
@@ -34,15 +35,14 @@ export default {
     this.key = ipsum.key;
     this.title = ipsum.title;
     this.body = ipsum.body;
-    
+
   },
   methods: {
     handleSubmit() {
       const ipsum = {
-        key: this.authorURL,
+        key: this.key,
         title: this.title,
         body: this.body,
-  
       };
       this.onUpdate(ipsum);
     }

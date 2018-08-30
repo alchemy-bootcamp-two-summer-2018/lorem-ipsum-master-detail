@@ -39,13 +39,9 @@ export default {
     },
     handleUpdate(updated) {
       const index = this.ipsums.findIndex(ipsum => {
-        return ipsum.title === updated.title;
+        return ipsum.key === updated.key;
       });
 
-      //It's comparing new title to the previous title. 
-      //Need to switch what's being identified to an ID.
-      console.log(updated)
-      console.log(index)
       if(index !== -1) {
         this.ipsums.splice(index, 1, updated);
         this.selectedIpsum = updated;

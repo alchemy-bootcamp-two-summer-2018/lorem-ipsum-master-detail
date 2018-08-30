@@ -16,6 +16,9 @@
 </template>
 
 <script>
+
+import shortid from 'shortid';
+
 export default {
     props: {
         ipsum: Object,
@@ -30,7 +33,7 @@ export default {
     methods: {
         handleAdd() {
             const ipsum = {
-                key: this.title,
+                key: shortid.generate(),
                 title: this.title,
                 body: this.body
 
