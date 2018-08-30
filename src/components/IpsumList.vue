@@ -14,6 +14,7 @@ import IpsumItem from './IpsumItem.vue';
 
 export default {
   props: {
+    ipsum: Object,
     ipsums: Array,
     selected: Object,
     onSelect: Function

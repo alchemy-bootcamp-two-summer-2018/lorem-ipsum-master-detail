@@ -31,6 +31,7 @@ export default {
   },
   created() {
     const ipsum = this.ipsum;
+    this.key = ipsum.key;
     this.title = ipsum.title;
     this.body = ipsum.body;
     
@@ -38,10 +39,10 @@ export default {
   methods: {
     handleSubmit() {
       const ipsum = {
-        key: this.title,
+        key: this.authorURL,
         title: this.title,
         body: this.body,
-        
+  
       };
       this.onUpdate(ipsum);
     }

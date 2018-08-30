@@ -10,7 +10,7 @@
           :onAdd="handleAdd"
       />
       <AddIpsum 
-      :onAdd="handleAdd"
+        :onAdd="handleAdd"
       />
     </div>
 </template>
@@ -42,6 +42,10 @@ export default {
         return ipsum.title === updated.title;
       });
 
+      //It's comparing new title to the previous title. 
+      //Need to switch what's being identified to an ID.
+      console.log(updated)
+      console.log(index)
       if(index !== -1) {
         this.ipsums.splice(index, 1, updated);
         this.selectedIpsum = updated;
